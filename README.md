@@ -1,1 +1,1 @@
-# Lovlinggo.app
+# Lovlingo.app
