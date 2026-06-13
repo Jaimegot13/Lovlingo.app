@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LovLingo</title>
+    <script>
+      // GitHub Pages SPA fix
+      // When GitHub Pages 404s on /login, /teachers etc., it serves this file.
+      // We encode the original path+search+hash into a query param and redirect
+      // to the root so index.html can pick it up and restore the real URL.
+      var l = window.location;
+      var path = l.pathname.slice(1).replace(/&/g, '~and~');
+      var search = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
+      l.replace(
+        l.protocol + '//' + l.host + '/?/' + path + search + l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
