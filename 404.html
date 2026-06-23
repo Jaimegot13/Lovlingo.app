@@ -11,8 +11,9 @@
       var l = window.location;
       var path = l.pathname.slice(1).replace(/&/g, '~and~');
       var search = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
+      var version = '&v=20260623-teacher-list';
       l.replace(
-        l.protocol + '//' + l.host + '/?/' + path + search + l.hash
+        l.protocol + '//' + l.host + '/?/' + path + search + version + l.hash
       );
     </script>
   </head>
